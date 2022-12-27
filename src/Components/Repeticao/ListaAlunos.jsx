@@ -1,5 +1,5 @@
 import React from "react";
-import alunos from "../../../Data/alunos";
+import alunos from "../../Data/alunos";
 
 export default (props) => {
     const alunosLI = alunos.map((aluno) => {

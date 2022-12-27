@@ -1,5 +1,5 @@
 import React from "react";
-import produtos from "../../../Data/produtos";
+import produtos from "../../Data/produtos";
 import "./TabelaProdutos.css";
 
 
@@ -8,7 +8,7 @@ export default (props) => {
     function getLinhas() {
         return produtos.map((produto, i) => {
             return (
-                <tr key={produto.id} className={i % 2 == 0 ? 'Par' : 'Impar'}>
+                <tr key={produto.id} className={i % 2 === 0 ? 'Par' : 'Impar'}>
                     <td>{produto.id}</td>
                     <td>{produto.nome}</td>
                     <td>€{produto.preco.toFixed(2)}</td>

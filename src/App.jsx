@@ -1,15 +1,23 @@
 import React from "react";
 import "./App.css"
 
-import Primeiro from './Components/basico/Primeiro'
-import ComParametro from './Components/basico/ComParamentro'
-import Fragmento from './Components/basico/Fragmento'
-import Aleatorio from './Components/basico/Aleatorio'
+import Primeiro from './Components/Basico/Primeiro'
+import ComParametro from './Components/Basico/ComParamentro'
+import Fragmento from './Components/Basico/Fragmento'
+import Aleatorio from './Components/Basico/Aleatorio'
 import Card from "./Layout/Card";
-import Familia from "./Components/basico/Familia";
-import FamiliaMembro from "./Components/basico/FamiliaMembro";
-import ListaAlunos from "./Components/basico/Repeticao/ListaAlunos";
-import TabelaProdutos from "./Components/basico/Repeticao/TabelaProdutos";
+import Familia from "./Components/Basico/Familia";
+import FamiliaMembro from "./Components/Basico/FamiliaMembro";
+import ListaAlunos from "./Components/Repeticao/ListaAlunos";
+import TabelaProdutos from "./Components/Repeticao/TabelaProdutos";
+import ParOuImpar from "./Components/Condicional/ParOuImpar";
+import UsuarioInfo from "./Components/Condicional/UsuarioInfo";
+import DiretaPai from "./Components/Comunicacao/DiretaPai";
+import IndiretaPai from "./Components/Comunicacao/IndiretaPai";
+import Input from "./Components/Formularios/Input";
+import Contador from "./Components/Contador/Contador";
+import Mega from "./Components/Mega/Mega";
+
 
 export default () => (
     <div className="App">
@@ -18,8 +26,39 @@ export default () => (
 
         <div className="Cards">
 
+            <Card titulo="#13 - Mega Sena" color="#96ceb4">
+                <Mega qtde={8} />
+            </Card>
+
+            <Card titulo="#12 - Contador" color="#35a79c">
+                <Contador numeroInicial={10}></Contador>
+            </Card>
+
+            <Card titulo="#11 - Componente Controlado" color="#adcbe3">
+                <Input></Input>
+            </Card>
+
+            <Card titulo="#10 - Comunicação Indireta" color="#f6cd61">
+                <IndiretaPai></IndiretaPai>
+            </Card>
+
+
+            <Card titulo="#09 - Comunicação Direta" color="#f6abb6">
+                <DiretaPai></DiretaPai>
+            </Card>
+
+            <Card titulo="#08 - Renderização Condicional Par ou Ímpar" color="#6497b1">
+                <ParOuImpar numero={20}></ParOuImpar>
+                <UsuarioInfo usuario={{ nome: 'Fernando' }} />
+                {/*<UsuarioInfo usuario={{}}/>*/}
+            </Card>
+
+            <Card titulo="#08 - Renderização Condicional Par ou Ímpar" color="#251e3e ">
+                <ParOuImpar numero={20}></ParOuImpar>
+            </Card>
+
             <Card titulo="#07 - Desafio Repetição" color="#45ADA8">
-               <TabelaProdutos></TabelaProdutos>
+                <TabelaProdutos></TabelaProdutos>
             </Card>
 
             <Card titulo="#06 - Repetição" color="#99B898">
